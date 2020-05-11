@@ -10,6 +10,12 @@ public class ACriminalCase {
     public void setup() {
     }
 
+    // TODO: Is created from a case file provided by the Police
+    // TODO: Should have Defendants, each with their own charges, and their own solicitor
+    // TODO: Stop the prosecution of the case against a Defendant
+    // TODO: Drop a charge against a Defendant
+    // TODO: Stop the case
+
     @Test
     public void shouldDoSomething() {
         // Make assertions

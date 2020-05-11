@@ -33,6 +33,7 @@ public class APoliceInvestigation {
     // TODO: should have some evidence
     // TODO: should have some witness statements
     // TODO: Suspects might have prior convictions
+    // TODO: should have a PNC Id
 
     @Test
     public void shouldBeSomething() {
