@@ -3,6 +3,10 @@ package com.harmellaw;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static com.harmellaw.CriminalOffence.*;
+import static com.harmellaw.CriminalOffence.ARMED_ROBBERY;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 public class APreChargeDecision {
 
     PreChargeDecision myPreChargeDecision;
@@ -19,16 +23,17 @@ public class APreChargeDecision {
 
     @Test
     public void shouldRecordAlternativeCharge_AdviceAgainstSuspects() {
-        // Make assertions
 
-        myPreChargeDecision.recordAlternateChargeAdvice(new Advice(currentCharge, alternateCharge, "This is the alternate charge advice"),
-                                                        new Suspect());
+        Suspect mySuspect = new Suspect();
+        Advice myAdvice = new Advice(ARMED_ROBBERY, DANGEROUS_DRIVING, "Increased change of conviction.");
 
-        assertThatChargeAdviceWasRecorded
+        myPreChargeDecision.recordAlternateChargeAdvice(mySuspect, myAdvice);
+
+        assertNotNull(myPreChargeDecision.alternateChargeAdvice.get(mySuspect));
     }
-    
+
     @Test
-    public void shoudRecordDisclosureManagementReminders() {
+    public void shouldRecordDisclosureManagementReminders() {
         // Make assertions
     }
 }
