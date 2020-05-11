@@ -28,7 +28,12 @@ public class APoliceInvestigation {
 
         assertTrue(exception.getMessage().contains("You must provide a suspect"));
     }
-    
+
+    // TODO: Suspects must have one or more offences
+    // TODO: should have some evidence
+    // TODO: should have some witness statements
+    // TODO: Suspects might have prior convictions
+
     @Test
     public void shouldBeSomething() {
         // Make assertions
