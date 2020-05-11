@@ -18,7 +18,27 @@ public class APoliceInvestigation {
         PoliceInvestigation anInvestigation = new PoliceInvestigation(aSuspect);
         assertFalse(anInvestigation.suspects.isEmpty());
     }
-    
+
+    @Test
+    public void canHavePreChargeDecisions() { // this is an assumption as to the max number
+        Suspect aSuspect = new Suspect();
+        PoliceInvestigation anInvestigation = new PoliceInvestigation(aSuspect);
+
+        assertNull(anInvestigation.preChargeDecision);
+    }
+
+    @Test
+    public void canHaveOnePreChargeDecisionMaximum() { // this is an assumption as to the max number
+        Suspect aSuspect = new Suspect();
+        PoliceInvestigation anInvestigation = new PoliceInvestigation(aSuspect);
+
+        PreChargeDecision decision = new PreChargeDecision();
+        anInvestigation.setPreChargeDecision(decision);
+
+        assertEquals(anInvestigation.preChargeDecision, decision);
+    }
+
+
     @Test
     public void cantHaveZeroSuspects() {
 

@@ -10,12 +10,12 @@ public class APreChargeDecision {
     }
 
     @Test
-    public void shouldRecordAlternativeCharge_AdviceAgainstSuspects() {
+    public void shouldRecordAlternativeChargeAdviceAgainstSuspects() {
         // Make assertions
     }
     
     @Test
-    public void shoudRecordDisclosureManagementReminders() {
+    public void shouldRecordDisclosureManagementReminders() {
         // Make assertions
     }
 }
