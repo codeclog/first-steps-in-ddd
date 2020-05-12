@@ -25,7 +25,7 @@ public class APreChargeDecision {
     public void shouldRecordAlternativeCharge_AdviceAgainstSuspects() {
 
         Suspect mySuspect = new Suspect();
-        Advice myAdvice = new Advice(ARMED_ROBBERY, DANGEROUS_DRIVING, "Increased change of conviction.");
+        Advice myAdvice = new Advice(ARMED_ROBBERY, DANGEROUS_DRIVING, "Greatly increased chance of conviction.");
 
         myPreChargeDecision.recordAlternateChargeAdvice(mySuspect, myAdvice);
 
