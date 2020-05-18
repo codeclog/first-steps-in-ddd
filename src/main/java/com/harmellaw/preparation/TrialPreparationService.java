@@ -1,4 +1,4 @@
-package com.harmellaw;
+package com.harmellaw.preparation;
 
 import com.harmellaw.preparation.CriminalCase;
 import com.harmellaw.preparation.PoliceCaseFile;

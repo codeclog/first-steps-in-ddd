@@ -3,6 +3,7 @@ package com.harmellaw;
 import com.harmellaw.preparation.CriminalCase;
 import com.harmellaw.preparation.Defendant;
 import com.harmellaw.preparation.PoliceCaseFile;
+import com.harmellaw.preparation.TrialPreparationService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

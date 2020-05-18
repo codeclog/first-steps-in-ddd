@@ -1,4 +1,4 @@
-package com.harmellaw;
+package com.harmellaw.investigation;
 
 import com.harmellaw.investigation.PoliceInvestigationDetails;
 import com.harmellaw.investigation.PreChargeDecisionCase;
