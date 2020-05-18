@@ -7,16 +7,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class APreChargeDecision {
 
+    private Suspect mySuspect;
+    private PreChargeDecision myPreChargeDecision;
+    private OffenceAdvice myOffenceAdvice;
+
     @BeforeEach
     public void setup() {
+        mySuspect = new Suspect();
+        myPreChargeDecision = new PreChargeDecision();
+        myOffenceAdvice = new OffenceAdvice();
     }
 
     @Test
     public void shouldRecordAlternativeOffenceAdviceAgainstSuspects() {
-        Suspect mySuspect = new Suspect();
-        PreChargeDecision myPreChargeDecision = new PreChargeDecision();
-        OffenceAdvice myOffenceAdvice = new OffenceAdvice();
-
         myPreChargeDecision.recordAlternativeOffenceAdvice(mySuspect, myOffenceAdvice);
 
         assertEquals(myOffenceAdvice, myPreChargeDecision.getOffenceAdviceFor(mySuspect));
