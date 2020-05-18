@@ -1,4 +1,6 @@
-package com.harmellaw;
+package com.harmellaw.prosecution;
+
+import com.harmellaw.investigation.CriminalOffence;
 
 public class OffenceAdvice {
 
