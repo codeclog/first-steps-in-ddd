@@ -6,12 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class PreChargeDecision {
+public class PreChargeDecisionCase {
 
     public final PNCId pncId;
     private Map<Suspect, OffenceAdvice> offenceAdvice = new HashMap<>();
 
-    public PreChargeDecision(PNCId pncId, Set<Suspect> suspects) {
+    public PreChargeDecisionCase(PNCId pncId, Set<Suspect> suspects) {
         this.pncId = pncId;
         for (Suspect s : suspects) {
             offenceAdvice.put(s, null);

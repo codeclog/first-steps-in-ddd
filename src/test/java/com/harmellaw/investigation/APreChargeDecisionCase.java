@@ -9,10 +9,10 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class APreChargeDecision {
+public class APreChargeDecisionCase {
 
     private Suspect suspect;
-    private PreChargeDecision preChargeDecision;
+    private PreChargeDecisionCase preChargeDecisionCase;
     private OffenceAdvice offenceAdvice;
     private Set<Suspect> suspects;
 
@@ -22,14 +22,14 @@ public class APreChargeDecision {
         suspect = new Suspect();
         suspects = new HashSet<>();
         suspects.add(suspect);
-        preChargeDecision = new PreChargeDecision(pncId, suspects);
+        preChargeDecisionCase = new PreChargeDecisionCase(pncId, suspects);
         offenceAdvice = new OffenceAdvice();
     }
 
     @Test
     public void shouldRecordAlternativeOffenceAdviceAgainstSuspects() {
-        preChargeDecision.recordAlternativeOffenceAdvice(suspect, offenceAdvice);
+        preChargeDecisionCase.recordAlternativeOffenceAdvice(suspect, offenceAdvice);
 
-        assertEquals(offenceAdvice, preChargeDecision.getOffenceAdviceFor(suspect));
+        assertEquals(offenceAdvice, preChargeDecisionCase.getOffenceAdviceFor(suspect));
     }
 }
