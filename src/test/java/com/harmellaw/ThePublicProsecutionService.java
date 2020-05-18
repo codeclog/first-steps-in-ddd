@@ -1,6 +1,6 @@
 package com.harmellaw;
 
-import com.harmellaw.investigation.PoliceInvestigation;
+import com.harmellaw.investigation.PoliceInvestigationDetails;
 import com.harmellaw.investigation.PreChargeDecisionCase;
 import com.harmellaw.investigation.Suspect;
 import com.harmellaw.preparation.CriminalCase;
@@ -16,22 +16,22 @@ public class ThePublicProsecutionService {
     private PublicProsecutionService thePps;
     private PNCId pncId;
     private Suspect suspect;
-    private PoliceInvestigation policeInvestigation;
+    private PoliceInvestigationDetails policeInvestigationDetails;
 
     @BeforeEach
     public void setup() {
         thePps = new PublicProsecutionService();
         pncId = new PNCId("AN-ID");
         suspect = new Suspect();
-        policeInvestigation = new PoliceInvestigation(pncId, suspect);
+        policeInvestigationDetails = new PoliceInvestigationDetails(pncId, suspect);
     }
 
     @Test
     public void shouldCreateAPreChargeDecisionCaseWhenReceivingAPcdRequest() {
-        PreChargeDecisionCase pcdCase = thePps.receiveRequestForPreChargeDecision(policeInvestigation);
+        PreChargeDecisionCase pcdCase = thePps.receiveRequestForPreChargeDecision(policeInvestigationDetails);
 
         assertEquals(pncId, pcdCase.pncId);
-        assertEquals(policeInvestigation.suspects, pcdCase.getSuspects());
+        assertEquals(policeInvestigationDetails.suspects, pcdCase.getSuspects());
     }
 
     @Test
