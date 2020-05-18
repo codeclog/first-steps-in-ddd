@@ -1,4 +1,7 @@
-package com.harmellaw;
+package com.harmellaw.preparation;
+
+import com.harmellaw.PNCId;
+import com.harmellaw.preparation.Defendant;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -2,6 +2,8 @@ package com.harmellaw;
 
 import com.harmellaw.investigation.PoliceInvestigation;
 import com.harmellaw.investigation.PreChargeDecisionCase;
+import com.harmellaw.preparation.CriminalCase;
+import com.harmellaw.preparation.PoliceCaseFile;
 
 public class PublicProsecutionService {
 
